@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main %}
+<p>A bunch of links are below.</p>
+
+<p><a href="{{ url_for('browse') }}">Browse Available Forms.</a></p>
+
+<p><a href="{{ url_for('index') }}">Return To The Index.</a></p>
+
+<p><a href="{{ url_for('user') }}">Log in to your account.</a></p>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block main %}
+<p>A bunch of links are below.</p>
+
+<p><a href="{{ url_for('browse') }}">Browse Available Forms.</a></p>
+
+<p><a href="{{ url_for('fill') }}">Fill A From Using A Code.</a></p>
+
+{% endblock %}
