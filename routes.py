@@ -1,6 +1,8 @@
 from app import *
-from flask import render_template, url_for, flash, get_flashed_messages, redirect, request, session
-from models import *
+from flask import render_template, redirect, url_for, flash, get_flashed_messages, request, session
+from models import * 
+
+import forms
 
 @app.route('/')
 @app.route('/index')
@@ -37,4 +39,4 @@ def login():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    return render_template('profile.html', user = user)
