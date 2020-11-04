@@ -7,15 +7,14 @@ app.config['SECRET_KEY'] = 'secret-key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 
 db = SQLAlchemy(app)
-users = []
 
 class User:
-    def __init__(self, id, username, password):
+    def __init__(self, id, username, password, email):
         self.id = id
         self.username = username
         self.password = password
+        self.email = email
 
-users.append(User(id=1, username='Tarun', password='password'))
 
 from routes import *
 

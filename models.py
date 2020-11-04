@@ -8,4 +8,4 @@ class User(db.Model):
     email = db.Column(db.String(100), nullable = False)
 
     def __repr__(self):
-        return f'{self.title} created on {self.date}'
+        return f'Username :{self.username} created with email id: {self.email}'
