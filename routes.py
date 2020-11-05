@@ -21,8 +21,20 @@ def fill():
 def browse():
     return render_template('browse.html')
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
+    user_name = request.form.get('username')
+    pass_word = request.form.get('password')
+
+    user_details = User.query.filter(User.username==user_name).first()
+
+    if user_details is None:
+        print("Yall fucked up")
+        return render_template('login.html')
+    
+    if user_details:
+        return render_template('index.html')
+    
     return render_template('login.html')
 
 @app.route('/profile')

@@ -31,18 +31,18 @@
 
 					<h3>Login</h3>
 
-					<form action="#" method="post">
+					<form action="/login" method="POST">
 
 						<div class="field">
-							<label for="name">Username</label>
-							<input name="name" id="name" type="text" placeholder="Username">
+							<label for="username">Username</label>
+							<input name="username" id="username" value='{{request.form.username}}' type="text" placeholder="Username">
 						</div>
 						<div class="field">
-							<label for="email">Password</label>
-							<input name="email" id="email" type="email" placeholder="Password">
+							<label for="password">Password</label>
+							<input name="password" id="pasword" value='{{request.form.password}}' type="password" placeholder="Password">
 						</div>
 						<ul class="actions">
-							<li><input value="Login" class="button alt" type="submit"></li>
+							<li><input value="login" class="button alt" type="submit"></li>
 						</ul>
 					</form>
 
@@ -72,18 +72,14 @@
 						</ul>
 					</form>
 
-					<div class="copyright">
-						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
-					</div>
-
 				</div>
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/skel.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
 
 	</body>
 </html>
