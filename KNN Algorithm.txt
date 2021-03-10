@@ -1,0 +1,14 @@
+K Nearest Neighbours Algorithm.
+
+When given a data set/graph plot, with multiple data points on it, each of which belongs to a specific group/set, with their own individual and unique characteristics, if we are asked to identiify a newly added entity in this graph, we would use the K-NN algorithm to do so. To sate it simply, this algorithm is used to determine the identity of an element based on it's proximity to a specific number of neighbours.
+
+The working of the algorithm is pretty simple. We calculate a number 'k' which uses the given data set to determine the number of neighbours we must consider for the new element's identity to be found. After calculating 'k', we then go through all the data points and calculate their Euclidean distance from the new element, and then store the values. We only need the 'k' least values, i.e. if 'k' is 5, we need 5 points with the least distance from the new element. After this is done, we now know the 'k' nearest neighbours and can now compare the characteristics of these neighbours among themselves, so as the find the largest group that the new element is closest to, and then assign the element to that group.
+
+Advantages of K-NN :
+    1. It is simple to implement.
+    2. It is robust to the noisy training data.
+    3. It can be more effective if the training data is large.
+
+Disadvantages of K-NN :
+    1. Always needs to determine the value of K which may be complex some time.
+    2. The computation cost is high because of calculating the distance between the data points for all the training samples.
