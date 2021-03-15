@@ -1,0 +1,9 @@
+Fuzzy Matching Algortihm.
+
+When given an input string and a sample data set, when asked to find the closest matches possible, we usually look for exact matches. However, in the real world, errors are made when it comes to entering and storing data. Here the concept of fuzzy matches come into play. Instead of only finding exact matches, we look for partial matches as well, while allowing for a set number of differences, called a fuzzy distance.
+
+When given two words, we can try to match them across a variety of criteria, of which the most importance is character matching. For example, the words "test" and "text". While the testing of the two of these would never result in a match using traditional systems, we can observe that if we replace the 's' and the 'x', it would be a match. Another example would be "book" and "back", where by chaninging the two 'o's to an 'a' and a 'c' would provide a match. This number of changes that muct be made to get a match is caled the Levenshtien Distance.
+
+Advantages :
+
+Disadvantages :
