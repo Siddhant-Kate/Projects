@@ -1,0 +1,17 @@
+Hash Maps.
+
+A data structure esqe system, a hash map or hash table consistes of a set of key-value pairs and a hash function which takes said 'key' as an input and assigns it a value in a table. This table is built off an array, and as such hold unique values for each key entered. This is performed by a hashing function which simply put, does the task of taking any key input and returning an integer as an output.
+
+An example of such funtioning of a hash function is where we take a string input, such as "lies" and generate a hash. One approach to do this would be to take the sum of all the characters(which comes out to 429) and mod that result against the size of out table, in this case taken to be 30. The result of the modulo operation is 9, and so our key-value pair is ("lies":9).
+
+However, in hash tables, there is a chance of two different keys resulting in the generation of the same hash, or the same value. For example, "lies" and "foes". When this occurs, we call it a collision, and there are a few provisions for this. The preferred approach is usually to make a linked list of the values with the same vales, one pointing on to the next and so on.
+
+Advantages :
+    1. Fast lookups, where average lookup is O(1).
+    2. Flexible keying systems.
+
+Disadvantages :
+    1. Worst case complexity is O(n).
+    2. Unordered.
+    3. Single directional lookup.
+    4. Not cache-friendly.
